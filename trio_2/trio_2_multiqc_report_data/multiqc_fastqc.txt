@@ -1,0 +1,7 @@
+Sample	Filename	File type	Encoding	Total Sequences	Sequences flagged as poor quality	Sequence length	%GC	total_deduplicated_percentage	avg_sequence_length	median_sequence_length	basic_statistics	per_base_sequence_quality	per_sequence_quality_scores	per_base_sequence_content	per_sequence_gc_content	per_base_n_content	sequence_length_distribution	sequence_duplication_levels	overrepresented_sequences	adapter_content
+HG00421.targets_R1	HG00421.targets_R1.fq.gz	Conventional base calls	Sanger / Illumina 1.9	690201.0	0.0	150.0	49.0	97.07284372701214	150.0	150	pass	pass	pass	pass	pass	pass	pass	pass	pass	pass
+HG00421.targets_R2	HG00421.targets_R2.fq.gz	Conventional base calls	Sanger / Illumina 1.9	690201.0	0.0	150.0	49.0	97.29289827658224	150.0	150	pass	pass	pass	pass	pass	pass	pass	pass	pass	pass
+HG00422.targets_R1	HG00422.targets_R1.fq.gz	Conventional base calls	Sanger / Illumina 1.9	689566.0	0.0	150.0	49.0	97.2082037982365	150.0	150	pass	pass	pass	pass	pass	pass	pass	pass	pass	pass
+HG00422.targets_R2	HG00422.targets_R2.fq.gz	Conventional base calls	Sanger / Illumina 1.9	689566.0	0.0	150.0	49.0	97.31385833368495	150.0	150	pass	pass	pass	pass	pass	pass	pass	pass	pass	pass
+HG00423.targets_R1	HG00423.targets_R1.fq.gz	Conventional base calls	Sanger / Illumina 1.9	690842.0	0.0	150.0	49.0	97.16387933716084	150.0	150	pass	pass	pass	pass	pass	pass	pass	pass	pass	pass
+HG00423.targets_R2	HG00423.targets_R2.fq.gz	Conventional base calls	Sanger / Illumina 1.9	690842.0	0.0	150.0	49.0	97.34619590995523	150.0	150	pass	pass	pass	pass	pass	pass	pass	pass	pass	pass

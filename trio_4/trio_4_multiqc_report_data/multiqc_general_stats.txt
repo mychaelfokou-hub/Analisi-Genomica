@@ -1,0 +1,13 @@
+Sample	QualiMap_mqc-generalstats-qualimap-avg_gc	QualiMap_mqc-generalstats-qualimap-median_insert_size	QualiMap_mqc-generalstats-qualimap-1_x_pc	QualiMap_mqc-generalstats-qualimap-5_x_pc	QualiMap_mqc-generalstats-qualimap-10_x_pc	QualiMap_mqc-generalstats-qualimap-30_x_pc	QualiMap_mqc-generalstats-qualimap-50_x_pc	QualiMap_mqc-generalstats-qualimap-median_coverage	QualiMap_mqc-generalstats-qualimap-mean_coverage	QualiMap_mqc-generalstats-qualimap-percentage_aligned	QualiMap_mqc-generalstats-qualimap-mapped_reads	QualiMap_mqc-generalstats-qualimap-total_reads	QualiMap_mqc-generalstats-qualimap-general_error_rate	QualiMap_mqc-generalstats-qualimap-regions_size	QualiMap_mqc-generalstats-qualimap-regions_mapped_reads	FastQC_mqc-generalstats-fastqc-percent_duplicates	FastQC_mqc-generalstats-fastqc-percent_gc	FastQC_mqc-generalstats-fastqc-avg_sequence_length	FastQC_mqc-generalstats-fastqc-median_sequence_length	FastQC_mqc-generalstats-fastqc-percent_fails	FastQC_mqc-generalstats-fastqc-total_sequences
+HG00421.targets_R1																2.880606278251534	49.0	150.0	150	0.0	690631.0
+HG00421.targets_R2																2.6476519517623984	49.0	150.0	150	0.0	690631.0
+HG00422.targets_R1																2.7472528433657573	49.0	150.0	150	0.0	689755.0
+HG00422.targets_R2																2.6594328434075436	49.0	150.0	150	0.0	689755.0
+HG00423.targets_R1																2.8064626050732357	49.0	150.0	150	0.0	689680.0
+HG00423.targets_R2																2.6327963889926878	49.0	150.0	150	0.0	689680.0
+QC_child_trio_4	52.34247976932377	299	99.99939382458798	99.99742375449895	99.99641346214561	95.04456652143715	8.136338953084548	40													
+QC_father_trio_4	52.37276561745142	300	99.99984845614699	99.9965650059986	99.99373618740923	95.19494853823325	8.179175348866579	40													
+QC_mother_trio_4	52.33821790658486	300	99.99909073688198	99.99696912293994	99.99510008208625	95.13382585085559	8.157302519416556	40													
+child_trio_4_sorted									40.0889	99.99717649511824	1381223.0	1381262.0	0.38999999999999996	1979625.0	712066.0						
+father_trio_4_sorted									40.1342	99.99202615421417	1379400.0	1379510.0	0.38999999999999996	1979625.0	712766.0						
+mother_trio_4_sorted									40.0855	99.9928227583807	1379261.0	1379360.0	0.38	1979625.0	711229.0						

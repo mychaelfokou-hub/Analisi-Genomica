@@ -1,0 +1,4 @@
+Sample	bam_file	total_reads	mapped_reads	mapped_bases	sequenced_bases	regions_size	regions_mapped_reads	mean_insert_size	median_insert_size	mean_mapping_quality	general_error_rate	mean_coverage	percentage_aligned
+child_trio_1_sorted	../child_trio_1_sorted.bam	1380474.0	1380414.0	79177601.0	79169478.0	1979625.0	710353.0	299.4661	299.0	41.7888	0.0039	39.9963	99.99565366678401
+father_trio_1_sorted	../father_trio_1_sorted.bam	1378888.0	1378774.0	79181400.0	79173442.0	1979625.0	709912.0	299.5076	299.0	41.7982	0.0039	39.9982	99.99173246848186
+mother_trio_1_sorted	../mother_trio_1_sorted.bam	1381610.0	1381538.0	79303064.0	79295043.0	1979625.0	711458.0	299.5362	300.0	41.7984	0.0039	40.0596	99.994788688559

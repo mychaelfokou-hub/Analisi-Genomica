@@ -1,0 +1,6 @@
+*.bam
+*.bam.bai
+*.bt2
+*.fa
+*.fa.fai
+_trio*
