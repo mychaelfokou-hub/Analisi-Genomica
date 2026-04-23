@@ -17,6 +17,3 @@ Server IP: 159.149.160.7
 Path: ~/progetto/trio_[1-5]/
 
 This setup ensures that the full bioinformatic workflow, from raw reads to final variant calls, can be audited and re-run in the original computing environmen
-
-# Note on Symbolic Links:
-To maintain a clean environment and avoid redundant data storage, symbolic links were used on the server to reference shared resources, such as the reference genome (chr20.fa) and the padded BED file. These links point to the central data repository at /home/BCG2026_exam/. While the links are not functional within this GitHub repository, the original files remain accessible on the server 159.149.160.7.
