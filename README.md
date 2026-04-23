@@ -15,7 +15,6 @@ The primary objective of this study is to implement a realistic diagnostic workf
 ## Repository Structure
 * **`pipeline_trio_x.sh`**: The original Bash script documenting the complete bioinformatic pipeline.
 * **`trio_1/` to `trio_5/`**: Directories containing the filtered VCF files and quality reports for each assigned family case.
-* **`README.md`**: This file, providing an overview of the technical approach.
 
 > **Note**: For the detailed clinical interpretation, UCSC Genome Browser visualizations, and the final diagnosis for each trio, please refer to the **Final PDF Report** submitted.
 
