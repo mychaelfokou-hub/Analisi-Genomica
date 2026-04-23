@@ -103,22 +103,22 @@ grep "#CHROM" trio_x_annotated.vcf
 
 # CASO A: Autosomica Recessiva (AR) - Es. Trio 1, 4, 5
 # Il figlio è omozigote mutato (AA), entrambi i genitori sono eterozigoti portatori (RA)
-bcftools view -i 'GT[2]="AA" && GT[0]="RA" && GT[1]="RA"' trio_x_annotated.vcf > trio_x_AR_pattern.vcf
+bcftools view -i 'GT[2]="AA" && GT[0]="RA" && GT[1]="RA"' trio_x_annotated.vcf > trio_x_genotipo.vcf
 
 # CASO B: Autosomica Dominante (AD) de novo - Es. Trio 3
 # Il figlio è eterozigote (RA), entrambi i genitori sono omozigoti wild-type (RR)
-bcftools view -i 'GT[2]="RA" && GT[0]="RR" && GT[1]="RR"' trio_x_annotated.vcf > trio_x_AD_denovo.vcf
+bcftools view -i 'GT[2]="RA" && GT[0]="RR" && GT[1]="RR"' trio_x_annotated.vcf > trio_x_genotipo.vcf
 
 # CASO C: Autosomica Dominante (AD) ereditata dal padre - Es. Trio 2
 # Il figlio è eterozigote (RA), il padre è eterozigote (RA), la madre è wild-type (RR)
-bcftools view -i 'GT[2]="RA" && GT[1]="RA" && GT[0]="RR"' trio_x_annotated.vcf > trio_x_AD_inherited_father.vcf
+bcftools view -i 'GT[2]="RA" && GT[1]="RA" && GT[0]="RR"' trio_x_annotated.vcf > trio_x_genotipo.vcf
 
 # ------------------------------------------------------------------------------
 # 8.b FILTRAGGIO PER IMPATTO E FREQUENZA
 # ------------------------------------------------------------------------------
 
 echo "Filtraggio per impatto (HIGH/MODERATE) e frequenza allelica rara (MAX_AF < 0.0001)..."
-filter_vep -i trio_x_AR_pattern.vcf -o trio_x_FINAL_CANDIDATES.vcf \
+filter_vep -i trio_x_genotipo.vcf -o trio_x_FINAL_CANDIDATES.vcf \
 --filter "(IMPACT is HIGH or IMPACT is MODERATE) and (not MAX_AF or MAX_AF < 0.0001)"
 # ------------------------------------------------------------------------------
 # 9. RISULTATI FINALI E PRIORITIZZAZIONE
