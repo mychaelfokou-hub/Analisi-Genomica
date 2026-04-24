@@ -7,13 +7,23 @@
 # con il numero del trio che vuoi riprodurre (es. trio_1, trio_2, ecc.)
 
 # ------------------------------------------------------------------------------
-# 1. CONTROLLO QUALITA' DEL SEQUENZIAMENTO (FastQC)
+# 0. PRECONFIGURAZIONE AMBIENTE (Link e Cartelle)
 # ------------------------------------------------------------------------------
-echo "Avvio FastQC per il controllo qualità delle reads grezze..."
-mkdir -p ~/progetto/trio_x/fastqc_reports
+echo "Creazione link simbolici ai dati e file di riferimento..."
+# Uso di -sf per forzare la creazione/aggiornamento senza errori se esistono già
+ln -sf /home/BCG2026_exam/BCG2026_mikefokou cartella.dati
+ln -sf /home/BCG2026_exam/chr20.fa .
+ln -sf /home/BCG2026_exam/chr20.fa.fai .
+ln -sf /home/BCG2026_exam/chr20.*.bt2 .
+ln -sf /home/BCG2026_exam/chr20_ILMN_Exome_2.0_Plus_Panel.hg38_padded.bed .
+ln -sf /home/BCG2026_exam/list_disorders.txt .
+ln -sf /home/BCG2026_exam/trios.txt .
 
-fastqc /home/mikefokou/progetto/cartella.dati/trio_x/*.fq.gz \
--o ~/progetto/trio_x/fastqc_reports
+echo "Organizzazione delle cartelle per i case study..."
+mkdir -p trio_1 trio_2 trio_3 trio_4 trio_5
+for i in {1..5}; do 
+    mkdir -p trio_$i/vcf trio_$i/fastqc_reports trio_$i/qualimap_reports
+done
 
 # ------------------------------------------------------------------------------
 # 2. ALLINEAMENTO AL GENOMA DI RIFERIMENTO (Bowtie2 & Samtools)
