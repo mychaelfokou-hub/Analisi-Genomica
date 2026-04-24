@@ -146,6 +146,8 @@ echo "Numero di varianti candidate finali:"
 grep -v "#" trio_x_FINAL_CANDIDATES.vcf | wc -l
 
 echo "Estrazione dettagli varianti (Geni, SIFT, PolyPhen):"
-bcftools query -f '%CHROM\t%POS\t%INFO/IMPACT\t%INFO/SYMBOL\t%INFO/SIFT\t%INFO/PolyPhen\n' trio_x_FINAL_CANDIDATES.vcf | column -s '|' -t | awk '{print $1, $2, $7, $8, "SIFT:", $25, "PolyPhen:", $26}'
+bcftools query -f '%CHROM\t%POS\t%REF\t%ALT\t%INFO/CSQ\n' trio_1_FINAL_CANDIDATES.vcf | \
+column -s '|' -t | \
+awk '{print "LOC:", $1, $2, "| REF/ALT:", $3">"$4, "| INFO:", $5, $6, $7, $8, $9, $10, $11, $12}'
 
 echo "Analisi completata!"
