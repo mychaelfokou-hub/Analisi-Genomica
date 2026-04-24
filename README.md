@@ -1,19 +1,19 @@
-This repository contains the analysis pipeline, filtered VCF files, and diagnostic results.
+# Genomics-FamilyTrios
 
-Important Note on Large Files:
-Due to storage limitations on GitHub, large genomic files have been excluded from this repository. These include:
+## Project Background
+This repository contains the final project for the **Genomics and Transcriptomics** course, part of the Master's degree in **Bioinformatics for Computational Genomics** at the University of Milan (UniMi) and Politecnico di Milano (Polimi). The course aims to provide a solid foundation in modern genomic and transcriptomic analysis using **Unix**-based environments and industry-standard bioinformatic tools for processing nucleic acid sequencing data.
 
-Raw and aligned sequencing data (BAM/BAI files).
+## Project Overview
+The primary objective of this study is to implement a realistic diagnostic workflow for identifying rare genetic disorders using simulated **Trio-based Exome Sequencing** data. The analysis focuses on identifying causal variants by applying inheritance-based filtering models (Autosomal Recessive, Autosomal Dominant *de novo*, or Inherited).
 
-Reference genome sequences (FASTA and FAI).
+### Technical Details:
+* **Genomic Context**: Exome sequencing focused exclusively on **Chromosome 20** (GRCh38 reference).
+* **Datasets**: Simulated data derived from real genotypes provided by the 1000 Genomes Project.
+* **Workflow**: The pipeline covers the entire process from raw data quality control (FastQC) and alignment (Bowtie2) to variant calling (Freebayes), clinical annotation (VEP), and diagnostic interpretation.
+* **Reproducibility**: All intermediate files, logs, and final variants are organized to ensure the analysis is fully reproducible.
 
-Alignment indexes (Bowtie2 .bt2 files).
+## Repository Structure
+* **`pipeline_trio_x.sh`**: The original Bash script documenting the complete bioinformatic pipeline.
+* **`trio_1/` to `trio_5/`**: Directories containing the filtered VCF files and quality reports for each assigned family case.
 
-Access to Raw Data:
-All intermediate and large-scale files are stored and organized for reproducibility on the course's UNIX server. They can be accessed by authorized personnel at the following location:
-
-Server IP: 159.149.160.7
-
-Path: ~/progetto/trio_[1-5]/
-
-This setup ensures that the full bioinformatic workflow, from raw reads to final variant calls, can be audited and re-run in the original computing environmen
+> **Note**: For the detailed clinical interpretation, UCSC Genome Browser visualizations, and the final diagnosis for each trio, please refer to the **Final PDF Report** submitted.
