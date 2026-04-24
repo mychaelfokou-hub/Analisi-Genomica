@@ -17,6 +17,3 @@ The primary objective of this study is to implement a realistic diagnostic workf
 * **`trio_1/` to `trio_5/`**: Directories containing the filtered VCF files and quality reports for each assigned family case.
 
 > **Note**: For the detailed clinical interpretation, UCSC Genome Browser visualizations, and the final diagnosis for each trio, please refer to the **Final PDF Report** submitted.
-
-## Author
-This work was conducted and implemented by **Mychael Fokou**.
