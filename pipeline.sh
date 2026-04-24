@@ -26,6 +26,13 @@ for i in {1..5}; do
 done
 
 # ------------------------------------------------------------------------------
+# 1. CONTROLLO QUALITA' DEL SEQUENZIAMENTO (FastQC)
+#    CARTELLA IN CUI ESEGUIRE IL COMANDO: fastqc_reports
+# ------------------------------------------------------------------------------
+echo "Avvio FastQC per il controllo qualità delle reads grezze..."
+fastqc ~/progetto/cartella.dati/trio_x/*.fq.gz -o ~/progetto/trio_x/fastqc_reports
+
+# ------------------------------------------------------------------------------
 # 2. ALLINEAMENTO AL GENOMA DI RIFERIMENTO (Bowtie2 & Samtools)
 # ------------------------------------------------------------------------------
 echo "Avvio allineamento e conversione in BAM ordinato..."
@@ -58,6 +65,7 @@ done
 
 # ------------------------------------------------------------------------------
 # 4. CONTROLLO QUALITA' DELL'ALLINEAMENTO SULL'ESOMA (Qualimap & MultiQC)
+#    CARTELLA IN CUI ESEGUIRE IL COMANDO: qualimap_reports
 # ------------------------------------------------------------------------------
 echo "Avvio Qualimap BamQC sulle regioni target..."
 for s in child_trio_x father_trio_x mother_trio_x; do
@@ -83,6 +91,7 @@ freebayes -f ../../chr20.fa \
 
 # ------------------------------------------------------------------------------
 # 6. FILTRAGGIO SULLE REGIONI TARGET DELL'ESOMA (Bedtools)
+#    CARTELLA IN CUI ESEGUIRE IL COMANDO: vcf
 # ------------------------------------------------------------------------------
 echo "Intersezione delle varianti con il file BED..."
 bedtools intersect \
