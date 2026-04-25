@@ -12,8 +12,4 @@ The primary objective of this study is to implement a realistic diagnostic workf
 * **Workflow**: The pipeline covers the entire process from raw data quality control (FastQC) and alignment (Bowtie2) to variant calling (Freebayes), clinical annotation (VEP), and diagnostic interpretation.
 * **Reproducibility**: All intermediate files, logs, and final variants are organized to ensure the analysis is fully reproducible.
 
-## Repository Structure
-* **`pipeline_trio_x.sh`**: The original Bash script documenting the complete bioinformatic pipeline.
-* **`trio_1/` to `trio_5/`**: Directories containing the filtered VCF files and quality reports for each assigned family case.
-
 > **Note**: For the detailed clinical interpretation, UCSC Genome Browser visualizations, and the final diagnosis for each trio, please refer to the **Final PDF Report** submitted.
