@@ -47,9 +47,9 @@ for f in HG00421 HG00422 HG00423; do
     echo "Processando $f come $SM..."
     
     bowtie2 -p 4 \
-    -x progetto/chr20 \
-    -1 progetto/cartella.dati/trio_x/${f}.targets_R1.fq.gz \
-    -2 progetto/cartella.dati/trio_x/${f}.targets_R2.fq.gz \
+    -x /progetto/chr20 \
+    -1 /progetto/cartella.dati/trio_x/${f}.targets_R1.fq.gz \
+    -2 /progetto/cartella.dati/trio_x/${f}.targets_R2.fq.gz \
     --rg-id "$f" --rg "SM:$SM" | \
     samtools view -Sb - | \
     samtools sort -o ${SM}_sorted.bam
