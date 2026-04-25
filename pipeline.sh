@@ -47,9 +47,9 @@ for f in HG00421 HG00422 HG00423; do
     echo "Processando $f come $SM..."
     
     bowtie2 -p 4 \
-    -x /home/mikefokou/progetto/chr20 \
-    -1 /home/mikefokou/progetto/cartella.dati/trio_x/${f}.targets_R1.fq.gz \
-    -2 /home/mikefokou/progetto/cartella.dati/trio_x/${f}.targets_R2.fq.gz \
+    -x progetto/chr20 \
+    -1 progetto/cartella.dati/trio_x/${f}.targets_R1.fq.gz \
+    -2 progetto/cartella.dati/trio_x/${f}.targets_R2.fq.gz \
     --rg-id "$f" --rg "SM:$SM" | \
     samtools view -Sb - | \
     samtools sort -o ${SM}_sorted.bam
@@ -71,7 +71,7 @@ echo "Avvio Qualimap BamQC sulle regioni target..."
 for s in child_trio_x father_trio_x mother_trio_x; do
     qualimap bamqc \
     -bam ../${s}_sorted.bam \
-    --feature-file /home/mikefokou/progetto/chr20_ILMN_Exome_2.0_Plus_Panel.hg38_padded.bed \
+    --feature-file progetto/chr20_ILMN_Exome_2.0_Plus_Panel.hg38_padded.bed \
     -outdir QC_${s}
 done
 
